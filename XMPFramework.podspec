@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.version          = '1.0.0'
   s.summary          = 'Simple XMP framework to read/write XMP data.'
   s.description      = 'XMPFramework is a simple Objective-C wrapper on top of Adobe XMP ToolKit that allow for a native API similar to NSUserDefaults to read/write XMP data.'
+  s.platforms = { :ios => "13.0", :osx => "10.14" }
 
   # ―――  Author/License data  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.homepage         = 'https://github.com/IHEARTCOOKIES/XMPFramework'
@@ -28,7 +29,7 @@ Pod::Spec.new do |s|
   s.vendored_libraries = 'XMPFramework/Adobe-XMP-ToolKit/libraries/libXMPCoreStatic.a', 'XMPFramework/Adobe-XMP-ToolKit/libraries/libXMPFilesStatic.a'
   s.module_name = 'XMPFramework'
   s.libraries = 'resolv', 'stdc++'
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '13.0'
   s.pod_target_xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/XMPFramework/XMPFramework/Adobe-XMP-ToolKit/include $(SRCROOT)/../../XMPFramework/XMPFramework/Adobe-XMP-ToolKit/include $(SRCROOT)/../../XMPFramework/Adobe-XMP-ToolKit/include',
                             'VALID_ARCHS' => 'armv7 x86_64 arm64' }
   
